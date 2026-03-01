@@ -1,36 +1,8 @@
 [gd_scene format=4 uid="uid://djabft8d1kq8a"]
 
-[ext_resource type="Texture2D" uid="uid://cdyu7a4n0bu46" path="res://1.png" id="2_ok8r0"]
-[ext_resource type="Texture2D" uid="uid://2381js0s257y" path="res://2.png" id="3_audra"]
-[ext_resource type="Texture2D" uid="uid://cw5gvviw4gmea" path="res://3.png" id="4_x7kom"]
+[ext_resource type="Texture2D" uid="uid://xjohjurx5nvt" path="res://IceBox.png" id="3_t5y7p"]
 [ext_resource type="Texture2D" uid="uid://bcofsn80pn5xy" path="res://border.png" id="5_audra"]
 [ext_resource type="PackedScene" uid="uid://buascrxu107s5" path="res://character_body_2d.tscn" id="5_ok8r0"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qoovb"]
-texture = ExtResource("2_ok8r0")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -17.758347, -32, 32, -32, 32, 32, -32, 32)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1w0mb"]
-texture = ExtResource("3_audra")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imcy2"]
-texture = ExtResource("4_x7kom")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -17.758347, -32, 32, -32, 32, 32, -32, 32)
-
-[sub_resource type="TileSet" id="TileSet_x7ero"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 3
-physics_layer_0/collision_mask = 3
-sources/0 = SubResource("TileSetAtlasSource_qoovb")
-sources/1 = SubResource("TileSetAtlasSource_1w0mb")
-sources/2 = SubResource("TileSetAtlasSource_imcy2")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x7kom"]
 texture = ExtResource("5_audra")
@@ -40,13 +12,20 @@ texture_region_size = Vector2i(128, 128)
 tile_size = Vector2i(128, 128)
 sources/0 = SubResource("TileSetAtlasSource_x7kom")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wg0iv"]
+texture = ExtResource("3_t5y7p")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_ok8r0"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
+sources/0 = SubResource("TileSetAtlasSource_wg0iv")
+
 [node name="Node2D" type="Node2D" unique_id=495566826]
 metadata/_edit_horizontal_guides_ = [-10162.0]
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1817868898]
-tile_map_data = PackedByteArray("AAD3/wMAAAAAAAAAAAD3/wQAAQAAAAAAAAD3/wYAAQAAAAAAAAD3/wUAAQAAAAAAAAD3/wcAAQAAAAAAAAD3/wgAAQAAAAAAAAD2/wMAAgAAAAAAAAD4/wMAAgAAAAAAAAD1/wMAAgAAAAAAAAD5/wMAAgAAAAAAAAD+/wAAAgAAAAAAAAD//wAAAgAAAAAAAAABAAAAAgAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAMAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAsAAQAAAAAAAAAAAAkAAQAAAAAAAAAAAAUAAQAAAAAAAAAAAAYAAQAAAAAAAAAAAAcAAQAAAAAAAAAAAAgAAQAAAAAAAAAAAAoAAQAAAAAAAAAAAAwAAQAAAAAAAAAAAA0AAQAAAAAAAAAAAA4AAQAAAAAAAAAAAA8AAQAAAAAAAAD3/wkAAQAAAAAAAAD3/woAAQAAAAAAAAD3/wsAAQAAAAAAAAD3/wwAAQAAAAAAAAD3/w0AAQAAAAAAAAD3/w4AAQAAAAAAAAD3/w8AAQAAAAAAAAAHAPz/AgAAAAAAAAAIAPz/AgAAAAAAAAAKAPz/AgAAAAAAAAALAPz/AgAAAAAAAAAJAPz/AAAAAAAAAAAJAP3/AQAAAAAAAAAJAP7/AQAAAAAAAAAJAP//AQAAAAAAAAAJAAAAAQAAAAAAAAAJAAEAAQAAAAAAAAAJAAIAAQAAAAAAAAAJAAMAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAJAAYAAQAAAAAAAAAJAAcAAQAAAAAAAAAJAAgAAQAAAAAAAAAJAAkAAQAAAAAAAAAJAAoAAQAAAAAAAAAJAAsAAQAAAAAAAAAJAAwAAQAAAAAAAAAJAA0AAQAAAAAAAAAJAA4AAQAAAAAAAAAJAA8AAQAAAAAAAADy/wQAAAAAAAAAAADy/wUAAQAAAAAAAADy/wYAAQAAAAAAAADy/wcAAQAAAAAAAADy/wgAAQAAAAAAAADy/wkAAQAAAAAAAADy/woAAQAAAAAAAADy/wsAAQAAAAAAAADy/wwAAQAAAAAAAADy/w0AAQAAAAAAAADy/w4AAQAAAAAAAADy/w8AAQAAAAAAAADw/wQAAgAAAAAAAADx/wQAAgAAAAAAAAA=")
-tile_set = SubResource("TileSet_x7ero")
-use_kinematic_bodies = true
 
 [node name="CharacterBody2D" parent="." unique_id=531009444 instance=ExtResource("5_ok8r0")]
 position = Vector2(0, -500)
@@ -54,3 +33,7 @@ collision_layer = 15
 
 [node name="bkg" type="TileMapLayer" parent="." unique_id=327231701]
 tile_set = SubResource("TileSet_qoovb")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=667894182]
+tile_map_data = PackedByteArray("AADy/w4AAAAAAAAAAADy/w8AAAAAAAAAAADy/w0AAAAAAAAAAADy/wwAAAAAAAAAAADy/wsAAAAAAAAAAADy/woAAAAAAAAAAADy/wkAAAAAAAAAAADy/wgAAAAAAAAAAADy/wcAAAAAAAAAAADy/wYAAAAAAAAAAADy/wUAAAAAAAAAAADy/wQAAAAAAAAAAADx/wQAAAAAAAAAAADw/wQAAAAAAAAAAAD1/wMAAAAAAAAAAAD2/wMAAAAAAAAAAAD3/wMAAAAAAAAAAAD4/wMAAAAAAAAAAAD5/wMAAAAAAAAAAAD3/wQAAAAAAAAAAAD3/wUAAAAAAAAAAAD3/wYAAAAAAAAAAAD3/wcAAAAAAAAAAAD3/wgAAAAAAAAAAAD3/wkAAAAAAAAAAAD3/woAAAAAAAAAAAD3/wsAAAAAAAAAAAD3/wwAAAAAAAAAAAD3/w0AAAAAAAAAAAD3/w4AAAAAAAAAAAD3/w8AAAAAAAAAAAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA0AAAAAAAAAAAAAAAwAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAYAAAAAAAAAAAAIAPz/AAAAAAAAAAAHAPz/AAAAAAAAAAAJAPz/AAAAAAAAAAAKAPz/AAAAAAAAAAALAPz/AAAAAAAAAAAJAP3/AAAAAAAAAAAJAP7/AAAAAAAAAAAJAAAAAAAAAAAAAAAJAP//AAAAAAAAAAAJAAIAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAYAAAAAAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAJAAkAAAAAAAAAAAAJAAoAAAAAAAAAAAAJAAsAAAAAAAAAAAAJAAwAAAAAAAAAAAAJAA0AAAAAAAAAAAAJAA4AAAAAAAAAAAAJAA8AAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_ok8r0")
