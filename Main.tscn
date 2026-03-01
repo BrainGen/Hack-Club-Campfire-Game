@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://bwdrcfjfgsux1"]
-
-[ext_resource type="PackedScene" uid="uid://bwdrcfjfgsux1" path="res://Main.tscn" id="1_glv2v"]
-
-[node name="Area3D" unique_id=2118066475 instance=ExtResource("1_glv2v")]
-
-[node name="base" parent="." index="0" unique_id=400692876]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -0.01, 0, 1, -4.3711387e-10, -0.055516124, 0.036329508, -0.00633049)
